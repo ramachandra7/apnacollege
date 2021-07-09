@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n],i,mi,j,ind;
+    for(i=0;i<n;i++)
+    cin>>a[i];
+    
+    
+    for(i=0;i<n;i++)
+    {
+        mi=INT_MAX;
+        for(j=i;j<n;j++)
+        {
+            if(a[j]<mi)
+            {
+                mi=a[j];
+                ind=j;
+            }
+        }
+        swap(a[ind],a[i]);
+        
+    }
+    
+        for(i=0;i<n;i++)
+    {
+        cout<<a[i]<<" ";
+    }
+    
+    return 0;
+}
